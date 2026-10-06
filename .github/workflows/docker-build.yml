@@ -31,7 +31,7 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
-          context: ./server
-          file: ./server/Dockerfile
+          context: ./server/teleserver
+          file: ./server/teleserver/Dockerfile
           push: true
           tags: ghcr.io/${{ steps.prep.outputs.repo_lower }}:latest
